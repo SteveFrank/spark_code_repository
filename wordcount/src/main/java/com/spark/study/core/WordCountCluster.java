@@ -8,7 +8,6 @@ import org.apache.spark.api.java.function.FlatMapFunction;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.PairFunction;
 import org.apache.spark.api.java.function.VoidFunction;
-
 import scala.Tuple2;
 
 import java.util.Arrays;
@@ -18,7 +17,7 @@ import java.util.Iterator;
  * @author yangqian
  * @date 2021/4/29
  */
-public class WordCountLocal {
+public class WordCountCluster {
 
     public static void main(String[] args) {
         // 本地执行方法
@@ -27,8 +26,7 @@ public class WordCountLocal {
         // 使用setMaster()可以设置Spark应用程序需要连接的Spark集群的master的节点url
         // 但是如果设置为local则代表为本地运行
         SparkConf sparkConf = new SparkConf()
-                .setAppName("WordCountLocal")
-                .setMaster("local");
+                .setAppName("WordCountCluster");
 
         // 2、创建JavaSparkContext对象
         // 在Spark中，SparkContext是Spark所有功能的一个入口，你无论是用java、scala，甚至是python编写
@@ -50,7 +48,7 @@ public class WordCountLocal {
         //      在Java中，创建的普通RDD，都叫做JavaRDD
         //      在这里呢，RDD中，有元素这种概念，如果是hdfs或者本地文件呢，创建的RDD，每一个元素就相当于
         // 是文件里的一行 (输入源)
-        JavaRDD<String> lines = sparkContext.textFile("/Users/qian/WorkSpaces/own-workspace/2021/spark_code_repository/wordcount/src/main/resources/spark.txt");
+        JavaRDD<String> lines = sparkContext.textFile("hdfs://master:9000/wordcount/spark.txt");
 
         // 4、初始化RDD进行transformation操作，也就是一些计算操作
         // 通常的操作会通过创建function，并配合RDD的map、flatMap等算子来执行
