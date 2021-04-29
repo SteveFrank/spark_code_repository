@@ -1,2 +1,5 @@
 .idea
 spark_code_repository.iml
+scala_code_repository/target
+spark_simple/target
+wordcount/target
