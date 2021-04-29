@@ -9,7 +9,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object WordCount {
 
   def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("WordCountScala").setMaster("spark://master:7077")
+    val conf = new SparkConf().setAppName("WordCountScala")
     val sc = new SparkContext(conf)
 
     val lines = sc.textFile("hdfs://master:9000/wordcount/spark.txt")
