@@ -39,7 +39,7 @@ public class WordCountLocal {
         //  使用的就是原生的SparkContext对象
         //      但是如果使用Java，那么就是JavaSparkContext对象
         //      如果是开发Spark SQL程序，那么就是SQLContext、HiveContext
-        //      如果是开发Spark Streaming程序，那么就是它独有的SparkContext
+        //      如果是开发Spark Streaming程序，那么就是它独有的SparkStreaming
         // 以此类推
         JavaSparkContext sparkContext = new JavaSparkContext(sparkConf);
 
