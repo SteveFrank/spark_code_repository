@@ -9,9 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
-        <module>scala_code_repository</module>
+        <module>spark_scala</module>
+        <module>spark_java</module>
         <module>spark_simple</module>
-        <module>wordcount</module>
+        <module>scala_code</module>
     </modules>
 
     <properties>

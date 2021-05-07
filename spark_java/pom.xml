@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>wordcount</artifactId>
+    <artifactId>spark_java</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
