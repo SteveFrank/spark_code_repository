@@ -1,4 +1,4 @@
-package com.spark.scala.lesson.wordcount
+package com.spark.scala.lesson.rdd
 
 import org.apache.spark.{SparkConf, SparkContext}
 
