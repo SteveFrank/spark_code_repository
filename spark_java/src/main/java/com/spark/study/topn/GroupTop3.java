@@ -53,6 +53,7 @@ public class GroupTop3 {
                             if (i < top3.length - 1) {
                                 top3[i + 1] = tmp;
                             }
+                            break;
                         }
                     }
                 }
