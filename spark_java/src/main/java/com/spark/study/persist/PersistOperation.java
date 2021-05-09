@@ -3,6 +3,7 @@ package com.spark.study.persist;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.storage.StorageLevel;
 
 /**
  * @author yangqian
@@ -20,7 +21,8 @@ public class PersistOperation {
         JavaRDD<String> lines
                 = sc
                 .textFile("/Users/qian/WorkSpaces/own-workspace/2021/spark_code_repository/spark_java/src/main/resources/spark.txt")
-                .cache();
+                .persist(StorageLevel.MEMORY_AND_DISK());
+//                .cache();
         long beginTime = System.currentTimeMillis();
 
         long count = lines.count();
