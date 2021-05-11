@@ -17,6 +17,12 @@ object DataSetCreate {
     val sqlContext = new SQLContext(sc)
     val dataset = sqlContext.read.json("hdfs://master:9000/spark_sql_file/students.json")
     dataset.show()
+    dataset.show()
+    dataset.printSchema()
+    dataset.select("name").show()
+    dataset.select(dataset("name"), dataset("age") + 1).show()
+    dataset.filter(dataset("age") > 18).show()
+    dataset.groupBy("age").count().show()
   }
 
 }
