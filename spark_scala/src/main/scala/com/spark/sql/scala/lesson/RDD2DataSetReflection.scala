@@ -8,6 +8,8 @@ import org.apache.spark.{SparkConf, SparkContext}
  *
  * 要注意区别DataSet 和 DataFrame的区别
  *
+ * 利用反射（隐式转换）的方式转为为DataSet
+ *
  * @author yangqian
  * @date 2021/5/12
  */
@@ -26,6 +28,8 @@ object RDD2DataSetReflection {
 
     val studentDF = sqlContext.createDataset(studentRDD)
     studentDF.printSchema()
+
+    // 与 DataFrame的registerTempTable类似
     studentDF.createOrReplaceTempView("students")
 
     val teenagerDF = sqlContext.sql("select id, name, age  from students where age <= 18")
