@@ -1,4 +1,4 @@
-package com.spark.sql.scala.lesson.entity
+package com.spark.sql.scala.lesson.dataset.entity
 
 /**
  * @author yangqian

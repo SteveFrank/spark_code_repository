@@ -1,6 +1,6 @@
-package com.spark.sql.scala.lesson
+package com.spark.sql.scala.lesson.dataset
 
-import org.apache.spark.sql.{SQLContext, SparkSession}
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**

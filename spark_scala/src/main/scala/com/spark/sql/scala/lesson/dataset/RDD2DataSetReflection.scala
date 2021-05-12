@@ -1,6 +1,6 @@
-package com.spark.sql.scala.lesson
+package com.spark.sql.scala.lesson.dataset
 
-import com.spark.sql.scala.lesson.entity.Student
+import com.spark.sql.scala.lesson.dataset.entity.Student
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.{SparkConf, SparkContext}
 
