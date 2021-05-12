@@ -5,6 +5,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SQLContext;
+import org.apache.spark.sql.SaveMode;
 
 /**
  * @author yangqian
@@ -28,6 +29,7 @@ public class ManuallySpecifyOptions {
         peopleDS.select("name")
                 .write().format("parquet")
                 .save("/Users/qian/WorkSpaces/own-workspace/2021/spark_code_repository/spark_java/src/main/resources/spark_sql/peopleName_java.parquet");
+
 
     }
 
