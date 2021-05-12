@@ -27,6 +27,7 @@ public class DataFrameCreate {
                 .sqlContext();
 
         // Java 代码无法在本地跑，需要打包后才可以跑
+        // Spark2.X DataFrame和DataSet的API进行了统一
         Dataset<Row> dataset = sqlContext.read().json("hdfs://master:9000/spark_sql_file/students.json");
         dataset.show();
         // 打印DataFrame
