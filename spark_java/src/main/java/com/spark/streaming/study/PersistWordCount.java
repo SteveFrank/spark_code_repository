@@ -84,7 +84,7 @@ public class PersistWordCount {
                         Tuple2<String, Integer> wordCount = null;
                         while(tuple.hasNext()) {
                             wordCount = tuple.next();
-                            String sql = "insert into wordcount(word, count) values('" + wordCount._1 + "'," + wordCount._2 + ")";
+                            String sql = "insert into test_spark_db.wordcount(word, count) values('" + wordCount._1 + "'," + wordCount._2 + ")";
                             Statement stmt = conn.createStatement();
                             stmt.executeUpdate(sql);
                         }
