@@ -32,9 +32,9 @@ public class ConnectionPool {
                 connectionQueue = new LinkedList<Connection>();
                 for (int i = 0; i < 10; i++) {
                     Connection conn = DriverManager.getConnection(
-                            "jdbc:mysql://localhost:3306/test_spark_db",
-                            "root",
-                            "admin123"
+                            "jdbc:mysql://huawei.hadoop.master:3306/test_spark_db",
+                            "test_spark_db",
+                            "HadoopAdmin123!@#"
                             );
                     connectionQueue.push(conn);
                 }
