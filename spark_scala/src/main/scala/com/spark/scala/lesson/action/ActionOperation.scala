@@ -66,7 +66,7 @@ object ActionOperation {
     val doubleNumbers = numbers.map { num => num * 2 }
 
     val doubleNumberArray = doubleNumbers.collect()
-    for (num <- doubleNumbers) {
+    for (num <- doubleNumberArray) {
       println(num)
     }
 

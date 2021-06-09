@@ -48,8 +48,8 @@ public class WordCountCluster {
         //      在Java中，创建的普通RDD，都叫做JavaRDD
         //      在这里呢，RDD中，有元素这种概念，如果是hdfs或者本地文件呢，创建的RDD，每一个元素就相当于
         // 是文件里的一行 (输入源)
-        JavaRDD<String> lines = sparkContext.textFile("hdfs://master:9000/wordcount/spark.txt");
-
+//        JavaRDD<String> lines = sparkContext.textFile("hdfs://master:9000/wordcount/spark.txt");
+        JavaRDD<String> lines = sparkContext.textFile("hdfs://huawei.hadoop.master:9000/spark_ext_data/wordcount/spark.txt");
         // 4、初始化RDD进行transformation操作，也就是一些计算操作
         // 通常的操作会通过创建function，并配合RDD的map、flatMap等算子来执行
         // function，通常，如果比较简单，则创建指定Function的匿名内部类

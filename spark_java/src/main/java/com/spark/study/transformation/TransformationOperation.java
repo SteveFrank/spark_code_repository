@@ -23,11 +23,11 @@ public class TransformationOperation {
     public static void main(String[] args) {
 //        map();
 //        filter();
-//        flatMap();
-//        groupByKey();
-//        reduceByKey();
-//        sortByKey();
-//        join();
+        flatMap();
+        groupByKey();
+        reduceByKey();
+        sortByKey();
+        join();
         cogroup();
     }
 
