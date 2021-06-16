@@ -29,17 +29,20 @@ public class HiveDataSource {
         hiveContext.sql("DROP TABLE IF EXISTS student_infos");
         // 判断student_infos表是否不存在，如果不存在，则创建该表
         hiveContext.sql("CREATE TABLE IF NOT EXISTS student_infos (name STRING, age INT)");
-        // /home/hadoop/App/Spark/spark_data
         // 将学生基本信息数据导入student_infos表
+        // VM /home/hadoop/App/Spark/spark_data
+        // HECS /home/hadoop/ext_data
         hiveContext.sql("LOAD DATA "
-                + "LOCAL INPATH '/home/hadoop/App/Spark/spark_data/student_infos.txt' "
+                + "LOCAL INPATH '/home/hadoop/ext_data/student_infos.txt' "
                 + "INTO TABLE student_infos");
 
         // 用同样的方式给student_scores导入数据
         hiveContext.sql("DROP TABLE IF EXISTS student_scores");
         hiveContext.sql("CREATE TABLE IF NOT EXISTS student_scores (name STRING, score INT)");
+        // VM /home/hadoop/App/Spark/spark_data
+        // HECS /home/hadoop/ext_data
         hiveContext.sql("LOAD DATA "
-                + "LOCAL INPATH '/home/hadoop/App/Spark/spark_data/student_scores.txt' "
+                + "LOCAL INPATH '/home/hadoop/ext_data/student_scores.txt' "
                 + "INTO TABLE student_scores");
 
         // 第二个功能，执行sql还可以返回DataFrame，用于查询
