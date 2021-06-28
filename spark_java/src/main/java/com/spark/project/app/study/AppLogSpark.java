@@ -70,10 +70,10 @@ public class AppLogSpark {
             // 根据 \t 进行四个字段的拆分
             String[] accessLogSplited = accessLog.split("\t");
             // 获取四个字段
-            long timeStamp = Long.valueOf(accessLogSplited[0]);
+            long timeStamp = Long.parseLong(accessLogSplited[0]);
             String deviceID = accessLogSplited[1];
-            long upTraffic = Long.valueOf(accessLogSplited[2]);
-            long downTraffic = Long.valueOf(accessLogSplited[3]);
+            long upTraffic = Long.parseLong(accessLogSplited[2]);
+            long downTraffic = Long.parseLong(accessLogSplited[3]);
 
             // 将时间戳、上行流量、下行流量，封装为自定义的可序列化对象
             AccessLogInfo accessLogInfo = new AccessLogInfo(timeStamp, upTraffic, downTraffic);
@@ -91,13 +91,11 @@ public class AppLogSpark {
     private static JavaPairRDD<String, AccessLogInfo> aggregateByDeviceID(JavaPairRDD<String, AccessLogInfo> accessLogPairRDD) {
         return accessLogPairRDD.reduceByKey(
                 (Function2<AccessLogInfo, AccessLogInfo, AccessLogInfo>) (accessLogInfo1, accessLogInfo2) -> {
-            long timestamp = Math.min(accessLogInfo1.getTimestamp(), accessLogInfo2.getTimestamp());
-            long upTraffic = accessLogInfo1.getUpTraffic() + accessLogInfo2.getUpTraffic();
-            long downTraffic = accessLogInfo1.getDownTraffic() + accessLogInfo2.getDownTraffic();
-
-            AccessLogInfo accessLogInfo = new AccessLogInfo(timestamp, upTraffic, downTraffic);
-            return accessLogInfo;
-        });
+                    long timestamp = Math.min(accessLogInfo1.getTimestamp(), accessLogInfo2.getTimestamp());
+                    long upTraffic = accessLogInfo1.getUpTraffic() + accessLogInfo2.getUpTraffic();
+                    long downTraffic = accessLogInfo1.getDownTraffic() + accessLogInfo2.getDownTraffic();
+                    return new AccessLogInfo(timestamp, upTraffic, downTraffic);
+                });
     }
 
     /**
@@ -119,8 +117,7 @@ public class AppLogSpark {
                             accessLogInfo.getDownTraffic(),
                             accessLogInfo.getTimestamp());
                     return new Tuple2<AccessLogSortKey, String>(accessLogSortKey, deviceId);
-                }
-        );
+                });
     }
 
 }
