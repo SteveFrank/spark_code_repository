@@ -66,23 +66,19 @@ public class AppLogSpark {
      * @return key-value格式RDD
      */
     private static JavaPairRDD<String, AccessLogInfo> mapAccessLogRDD2Pair(JavaRDD<String> accessLogRDD) {
-        return accessLogRDD.mapToPair(new PairFunction<String, String, AccessLogInfo>() {
-            private static final long serialVersionUID = -7535983169111013428L;
-            @Override
-            public Tuple2<String, AccessLogInfo> call(String accessLog) throws Exception {
-                // 根据 \t 进行四个字段的拆分
-                String[] accessLogSplited = accessLog.split("\t");
-                // 获取四个字段
-                long timeStamp = Long.valueOf(accessLogSplited[0]);
-                String deviceID = accessLogSplited[1];
-                long upTraffic = Long.valueOf(accessLogSplited[2]);
-                long downTraffic = Long.valueOf(accessLogSplited[3]);
+        return accessLogRDD.mapToPair((PairFunction<String, String, AccessLogInfo>) accessLog -> {
+            // 根据 \t 进行四个字段的拆分
+            String[] accessLogSplited = accessLog.split("\t");
+            // 获取四个字段
+            long timeStamp = Long.valueOf(accessLogSplited[0]);
+            String deviceID = accessLogSplited[1];
+            long upTraffic = Long.valueOf(accessLogSplited[2]);
+            long downTraffic = Long.valueOf(accessLogSplited[3]);
 
-                // 将时间戳、上行流量、下行流量，封装为自定义的可序列化对象
-                AccessLogInfo accessLogInfo = new AccessLogInfo(timeStamp, upTraffic, downTraffic);
+            // 将时间戳、上行流量、下行流量，封装为自定义的可序列化对象
+            AccessLogInfo accessLogInfo = new AccessLogInfo(timeStamp, upTraffic, downTraffic);
 
-                return new Tuple2<>(deviceID, accessLogInfo);
-            }
+            return new Tuple2<>(deviceID, accessLogInfo);
         });
     }
 
@@ -93,17 +89,14 @@ public class AppLogSpark {
      * @return 按照deviceID聚合的RDD
      */
     private static JavaPairRDD<String, AccessLogInfo> aggregateByDeviceID(JavaPairRDD<String, AccessLogInfo> accessLogPairRDD) {
-        return accessLogPairRDD.reduceByKey(new Function2<AccessLogInfo, AccessLogInfo, AccessLogInfo>() {
-            private static final long serialVersionUID = -8495330890423525253L;
-            @Override
-            public AccessLogInfo call(AccessLogInfo accessLogInfo1, AccessLogInfo accessLogInfo2) throws Exception {
-                long timestamp = Math.min(accessLogInfo1.getTimestamp(), accessLogInfo2.getTimestamp());
-                long upTraffic = accessLogInfo1.getUpTraffic() + accessLogInfo2.getUpTraffic();
-                long downTraffic = accessLogInfo1.getDownTraffic() + accessLogInfo2.getDownTraffic();
+        return accessLogPairRDD.reduceByKey(
+                (Function2<AccessLogInfo, AccessLogInfo, AccessLogInfo>) (accessLogInfo1, accessLogInfo2) -> {
+            long timestamp = Math.min(accessLogInfo1.getTimestamp(), accessLogInfo2.getTimestamp());
+            long upTraffic = accessLogInfo1.getUpTraffic() + accessLogInfo2.getUpTraffic();
+            long downTraffic = accessLogInfo1.getDownTraffic() + accessLogInfo2.getDownTraffic();
 
-                AccessLogInfo accessLogInfo = new AccessLogInfo(timestamp, upTraffic, downTraffic);
-                return accessLogInfo;
-            }
+            AccessLogInfo accessLogInfo = new AccessLogInfo(timestamp, upTraffic, downTraffic);
+            return accessLogInfo;
         });
     }
 
@@ -115,20 +108,17 @@ public class AppLogSpark {
     private static JavaPairRDD<AccessLogSortKey, String> mapRDDKey2SortKey(
             JavaPairRDD<String, AccessLogInfo> aggrAccessLogPairRDD) {
         return aggrAccessLogPairRDD.mapToPair(
-                new PairFunction<Tuple2<String, AccessLogInfo>, AccessLogSortKey, String>() {
-                    @Override
-                    public Tuple2<AccessLogSortKey, String> call(Tuple2<String, AccessLogInfo> tuple) throws Exception {
-                        // 获取tuple数据进行转换
-                        String deviceId = tuple._1;
-                        AccessLogInfo accessLogInfo = tuple._2;
+                (PairFunction<Tuple2<String, AccessLogInfo>, AccessLogSortKey, String>) tuple -> {
+                    // 获取tuple数据进行转换
+                    String deviceId = tuple._1;
+                    AccessLogInfo accessLogInfo = tuple._2;
 
-                        // 将日志信息封装为二次排序key
-                        AccessLogSortKey accessLogSortKey = new AccessLogSortKey(
-                                accessLogInfo.getUpTraffic(),
-                                accessLogInfo.getDownTraffic(),
-                                accessLogInfo.getTimestamp());
-                        return new Tuple2<AccessLogSortKey, String>(accessLogSortKey, deviceId);
-                    }
+                    // 将日志信息封装为二次排序key
+                    AccessLogSortKey accessLogSortKey = new AccessLogSortKey(
+                            accessLogInfo.getUpTraffic(),
+                            accessLogInfo.getDownTraffic(),
+                            accessLogInfo.getTimestamp());
+                    return new Tuple2<AccessLogSortKey, String>(accessLogSortKey, deviceId);
                 }
         );
     }
