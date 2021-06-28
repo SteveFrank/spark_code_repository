@@ -20,7 +20,6 @@ import java.util.Iterator;
  *
  * 基于HDFS的实时文件计算，监控HDFS目录，只要其中有新文件出现就进行实时处理
  *
- * @author yangqian
  * @date 2021/5/17
  */
 public class StreamingHDFSWordCount {

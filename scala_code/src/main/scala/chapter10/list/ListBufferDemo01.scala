@@ -3,7 +3,6 @@ package chapter10.list
 import scala.collection.mutable.ListBuffer
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object ListBufferDemo01 {

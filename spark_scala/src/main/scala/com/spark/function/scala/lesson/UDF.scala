@@ -5,7 +5,6 @@ import org.apache.spark.sql.types.{StringType, StructField, StructType}
 import org.apache.spark.sql.{Row, SparkSession}
 
 /**
- * @author yangqian
  * @date 2021/5/13
  */
 object UDF {

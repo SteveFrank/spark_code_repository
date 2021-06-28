@@ -9,7 +9,6 @@
  * 应用函数
  * 柯里化函数，抽象控制...
  *
- * @author yangqian
  * @date 2021/5/8
  */
 package object chapter05 {

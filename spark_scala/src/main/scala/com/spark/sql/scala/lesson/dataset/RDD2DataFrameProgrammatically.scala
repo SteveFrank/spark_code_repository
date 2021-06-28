@@ -5,7 +5,6 @@ import org.apache.spark.sql.{Row, SparkSession, types}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
- * @author yangqian
  * @date 2021/5/12
  */
 object RDD2DataFrameProgrammatically {

@@ -10,7 +10,6 @@ import org.apache.spark.api.java.function.VoidFunction;
 import scala.Tuple2;
 
 /**
- * @author yangqian
  * @date 2021/5/7
  */
 public class LineCount {

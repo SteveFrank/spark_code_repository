@@ -11,7 +11,6 @@
  *
  * 所有的集合都扩展自 Iterable 特质，在 Scala 中集合有可变（mutable）和不可变（immutable）两种类型。
  *
- * @author yangqian
  * @date 2021/5/8
  */
 package object chapter10 {

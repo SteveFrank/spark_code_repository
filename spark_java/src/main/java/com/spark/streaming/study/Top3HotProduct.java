@@ -29,7 +29,6 @@ import java.util.List;
  *
  * 每隔10秒，统计最近60秒的，每个种类的每个商品的点击次数，然后统计出每个种类top3热门的商品。
  *
- * @author yangqian
  * @date 2021/5/19
  */
 public class Top3HotProduct {

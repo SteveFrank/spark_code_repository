@@ -4,7 +4,6 @@ import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
- * @author yangqian
  * @date 2021/5/17
  */
 object StreamingWordCount {

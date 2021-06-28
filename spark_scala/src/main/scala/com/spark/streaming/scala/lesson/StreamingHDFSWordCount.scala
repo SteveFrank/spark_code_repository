@@ -7,7 +7,6 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
  *
  * 基于HDFS的实时streaming流
  *
- * @author yangqian
  * @date 2021/5/17
  */
 object StreamingHDFSWordCount {

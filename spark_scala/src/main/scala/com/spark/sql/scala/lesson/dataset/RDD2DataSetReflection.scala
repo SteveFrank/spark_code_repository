@@ -10,7 +10,6 @@ import org.apache.spark.{SparkConf, SparkContext}
  *
  * 利用反射（隐式转换）的方式转为为DataSet
  *
- * @author yangqian
  * @date 2021/5/12
  */
 object RDD2DataSetReflection {

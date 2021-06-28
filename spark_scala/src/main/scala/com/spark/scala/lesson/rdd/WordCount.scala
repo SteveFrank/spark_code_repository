@@ -3,7 +3,6 @@ package com.spark.scala.lesson.rdd
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
- * @author yangqian
  * @date 2021/4/29
  */
 object WordCount {

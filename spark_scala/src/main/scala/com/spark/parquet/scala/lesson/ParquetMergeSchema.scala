@@ -4,7 +4,6 @@ import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
- * @author yangqian
  * @date 2021/5/12
  */
 object ParquetMergeSchema {

@@ -3,7 +3,6 @@ package com.spark.scala.lesson.topn
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
- * @author yangqian
  * @date 2021/5/10
  */
 object GroupTop3 {

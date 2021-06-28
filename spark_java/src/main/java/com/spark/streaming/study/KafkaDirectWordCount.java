@@ -17,7 +17,6 @@ import java.util.*;
 
 /**
  * 基于Kafka Direct方式的实时wordcount程序
- * @author yangqian
  * @date 2021/5/17
  */
 public class KafkaDirectWordCount {

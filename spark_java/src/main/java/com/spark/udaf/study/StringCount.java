@@ -7,7 +7,6 @@ import org.apache.spark.sql.types.DataType;
 import org.apache.spark.sql.types.StructType;
 
 /**
- * @author yangqian
  * @date 2021/5/13
  */
 public class StringCount extends UserDefinedAggregateFunction {

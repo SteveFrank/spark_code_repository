@@ -19,7 +19,6 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @author yangqian
  * @date 2021/5/18
  */
 public class PersistWordCount {

@@ -1,7 +1,6 @@
 package com.spark.scala.lesson.secondarySort
 
 /**
- * @author yangqian
  * @date 2021/5/9
  */
 class SecondarySortKey(val first: Int, val second: Int) extends Ordered[SecondarySortKey] with Serializable {

@@ -20,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author yangqian
  * @date 2021/5/12
  */
 public class JsonDataSource {

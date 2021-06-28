@@ -18,7 +18,6 @@ import java.util.Iterator;
  * 1、对文本文件内的每个单词都统计出其出现的次数。
  * 2、按照每个单词出现次数的数量，降序排序。
  *
- * @author yangqian
  * @date 2021/5/9
  */
 public class SortWordCountApp {

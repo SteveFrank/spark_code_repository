@@ -6,7 +6,6 @@ import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{Row, SparkSession}
 
 /**
- * @author yangqian
  * @date 2021/5/13
  */
 object DailyUV {

@@ -1,7 +1,6 @@
 package chapter02
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object VarDemo02 {

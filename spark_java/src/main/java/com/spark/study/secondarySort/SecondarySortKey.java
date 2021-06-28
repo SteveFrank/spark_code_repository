@@ -11,7 +11,6 @@ import java.io.Serializable;
  * 按照第一列进行排序
  * 如果第一列相等，就按照第二列进行排序
  *
- * @author yangqian
  * @date 2021/5/9
  */
 public class SecondarySortKey implements Ordered<SecondarySortKey>, Serializable {

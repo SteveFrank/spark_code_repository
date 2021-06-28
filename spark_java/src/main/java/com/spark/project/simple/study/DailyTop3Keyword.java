@@ -28,7 +28,6 @@ import java.util.*;
  * 3、按照每天的top3搜索词的uv搜索总次数，倒序排序
  * 4、将数据保存到hive表中
  *
- * @author yangqian
  * @date 2021/5/13
  */
 public class DailyTop3Keyword {

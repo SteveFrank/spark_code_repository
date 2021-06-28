@@ -5,7 +5,6 @@ import org.apache.spark.streaming.Durations.seconds
 import org.apache.spark.streaming.StreamingContext
 
 /**
- * @author yangqian
  * @date 2021/5/18
  */
 object TransformBlacklist {

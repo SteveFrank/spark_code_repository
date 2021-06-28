@@ -23,7 +23,6 @@ import java.util.List;
  *
  * 为每个key维护一个state
  *
- * @author yangqian
  * @date 2021/5/17
  */
 public class UpdateStateByKeyWordCount {

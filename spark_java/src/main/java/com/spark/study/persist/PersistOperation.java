@@ -6,7 +6,6 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.storage.StorageLevel;
 
 /**
- * @author yangqian
  * @date 2021/5/9
  */
 public class PersistOperation {

@@ -3,7 +3,6 @@ package com.spark.scala.lesson.transformation.review
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
- * @author yangqian
  * @date 2021/6/6
  */
 object TransformationOperationReview {

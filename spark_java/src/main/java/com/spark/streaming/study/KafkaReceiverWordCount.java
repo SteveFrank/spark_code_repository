@@ -18,7 +18,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @author yangqian
  * @date 2021/5/17
  */
 public class KafkaReceiverWordCount {

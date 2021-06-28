@@ -4,7 +4,6 @@ import org.apache.spark.SparkConf
 import org.apache.spark.streaming.{Durations, Seconds, StreamingContext}
 
 /**
- * @author yangqian
  * @date 2021/5/18
  */
 object WindowHotSearchKeyword {

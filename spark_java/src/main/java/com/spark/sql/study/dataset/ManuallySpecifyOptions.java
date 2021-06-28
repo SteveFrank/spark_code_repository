@@ -8,7 +8,6 @@ import org.apache.spark.sql.SQLContext;
 import org.apache.spark.sql.SaveMode;
 
 /**
- * @author yangqian
  * @date 2021/5/12
  */
 public class ManuallySpecifyOptions {

@@ -4,7 +4,6 @@ package chapter09
  *
  * 编译器的优先级为 传值 >  隐式值 >  默认值
  *
- * @author yangqian
  * @date 2021/5/8
  */
 object ImplicitValDemo03 {

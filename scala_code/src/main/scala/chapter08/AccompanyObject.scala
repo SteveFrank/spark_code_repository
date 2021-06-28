@@ -10,7 +10,6 @@ package chapter08
  * 5. object ScalaPerson 编译后底层生成 ScalaPerson$类 ScalaPerson$.class
  * 6. 对于伴生对象的内容，我们可以直接通过 ScalaPerson.属性 或者方法
  *
- * @author yangqian
  * @date 2021/5/8
  */
 object AccompanyObject {

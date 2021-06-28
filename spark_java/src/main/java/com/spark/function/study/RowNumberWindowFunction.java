@@ -9,7 +9,6 @@ import org.apache.spark.sql.SparkSession;
  *
  * 利用 row_number() 开窗函数统计TOP3的数据
  *
- * @author yangqian
  * @date 2021/5/13
  */
 public class RowNumberWindowFunction {

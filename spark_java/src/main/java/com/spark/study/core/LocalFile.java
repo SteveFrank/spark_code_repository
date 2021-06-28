@@ -7,7 +7,6 @@ import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 
 /**
- * @author yangqian
  * @date 2021/5/7
  */
 public class LocalFile {

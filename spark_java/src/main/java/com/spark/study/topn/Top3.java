@@ -11,7 +11,6 @@ import scala.Tuple2;
 import java.util.List;
 
 /**
- * @author yangqian
  * @date 2021/5/9
  */
 public class Top3 {

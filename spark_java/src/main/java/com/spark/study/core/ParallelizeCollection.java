@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author yangqian
  * @date 2021/5/6
  */
 public class ParallelizeCollection {

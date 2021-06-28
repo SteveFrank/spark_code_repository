@@ -3,7 +3,6 @@ package chapter10.map
 import scala.collection.mutable
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object MapDemo01 {

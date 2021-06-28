@@ -9,7 +9,6 @@ import org.apache.spark.sql.SparkSession;
  *
  * Hive数据源
  *
- * @author yangqian
  * @date 2021/5/12
  */
 public class HiveDataSource {

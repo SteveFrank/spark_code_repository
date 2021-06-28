@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author yangqian
  * @date 2021/5/12
  */
 public class JdbcDataSource {

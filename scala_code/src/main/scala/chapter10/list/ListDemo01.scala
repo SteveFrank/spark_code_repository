@@ -1,7 +1,6 @@
 package chapter10.list
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object ListDemo01 {

@@ -8,7 +8,6 @@ import org.apache.spark.streaming.Durations.seconds
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
 /**
- * @author yangqian
  * @date 2021/5/19
  */
 object Top3HotProduct {

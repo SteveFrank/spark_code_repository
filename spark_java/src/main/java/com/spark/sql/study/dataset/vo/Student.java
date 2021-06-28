@@ -3,7 +3,6 @@ package com.spark.sql.study.dataset.vo;
 import java.io.Serializable;
 
 /**
- * @author yangqian
  * @date 2021/5/12
  */
 public class Student implements Serializable {

@@ -1,7 +1,6 @@
 package chapter10.array
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object ArrayDemo02 {

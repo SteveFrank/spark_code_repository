@@ -4,7 +4,6 @@ package chapter02
  *
  * 变量基本组成单位
  *
- * @author yangqian
  * @date 2021/5/8
  */
 object ScalaFunDemo01 {

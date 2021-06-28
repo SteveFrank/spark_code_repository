@@ -14,7 +14,6 @@ import java.util.List;
  *
  * 操作列式数据
  * 如何处理列式数据
- * @author yangqian
  * @date 2021/5/12
  */
 public class ParquetLoadData {

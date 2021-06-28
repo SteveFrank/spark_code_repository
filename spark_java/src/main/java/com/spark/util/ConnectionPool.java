@@ -8,7 +8,6 @@ import java.util.LinkedList;
  *
  * 简易版的连接池
  *
- * @author yangqian
  * @date 2021/5/18
  */
 public class ConnectionPool {

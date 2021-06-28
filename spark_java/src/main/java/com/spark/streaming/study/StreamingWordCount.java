@@ -18,7 +18,6 @@ import java.util.Iterator;
  *
  * 实时wordcount程序
  *
- * @author yangqian
  * @date 2021/5/14
  */
 public class StreamingWordCount {

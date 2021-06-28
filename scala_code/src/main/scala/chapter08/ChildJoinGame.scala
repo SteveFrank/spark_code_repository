@@ -1,9 +1,7 @@
 package chapter08
 
-import chapter08.Child02.joinGame
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object ChildJoinGame {

@@ -20,7 +20,6 @@ import java.util.List;
  *
  * 基于滑动窗口的热点搜索词的实时统计
  *
- * @author yangqian
  * @date 2021/5/18
  */
 public class WindowHotSearchKeyword {

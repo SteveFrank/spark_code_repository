@@ -14,7 +14,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 /**
- * @author yangqian
  * @date 2021/6/6
  */
 public class WordCountReview {

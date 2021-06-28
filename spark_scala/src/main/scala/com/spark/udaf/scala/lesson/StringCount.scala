@@ -5,7 +5,6 @@ import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAg
 import org.apache.spark.sql.types.{DataType, IntegerType, StringType, StructField, StructType}
 
 /**
- * @author yangqian
  * @date 2021/5/13
  */
 class StringCount extends UserDefinedAggregateFunction {

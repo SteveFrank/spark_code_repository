@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 /**
- * @author yangqian
  * @date 2021/5/9
  */
 public class GroupTop3 {

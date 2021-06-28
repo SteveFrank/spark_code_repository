@@ -1,7 +1,6 @@
 package chapter04
 
 /**
- * @author yangqian
  * @date 2021/5/8
  */
 object ForDemo01 {

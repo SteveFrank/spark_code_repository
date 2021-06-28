@@ -16,7 +16,6 @@ import java.util.List;
  *
  * 利用反射的方式
  *
- * @author yangqian
  * @date 2021/5/12
  */
 public class RDD2DataSetReflection {

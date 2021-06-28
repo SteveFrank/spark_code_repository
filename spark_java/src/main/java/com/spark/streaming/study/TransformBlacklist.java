@@ -21,7 +21,6 @@ import java.util.List;
  * 基于transform的实时广告计费日志黑名单过滤
  * 类比于广告业务的大数据系统（黑心商家的胡乱点击）
  *
- * @author yangqian
  * @date 2021/5/17
  */
 public class TransformBlacklist {

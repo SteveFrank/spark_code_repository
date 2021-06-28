@@ -11,7 +11,6 @@ import org.apache.spark.sql.SparkSession;
  *
  * 自动分区推断
  *
- * @author yangqian
  * @date 2021/5/12
  */
 public class ParquetPartitionDiscovery {
