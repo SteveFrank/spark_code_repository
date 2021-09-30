@@ -11,7 +11,7 @@ object LineCount {
     val conf = new SparkConf().setAppName("LineCount").setMaster("local")
     val sc = new SparkContext(conf)
 
-    val lines = sc.textFile("/Users/qian/WorkSpaces/own-workspace/2021/spark_code_repository/wordcount/src/main/resources/spark.txt")
+    val lines = sc.textFile("/Users/qian/WorkSpaces/own-workspace/2021/spark_code_repository/spark_java/src/main/resources/spark.txt")
     val pairs = lines.map{ line => (line, 1) }
     val lineCounts = pairs.reduceByKey(_ + _)
 
